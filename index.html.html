@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The Unstoppable Rise of Burgers and Fries – Guided Reading</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap">
+<style>
+:root{--bg:#fbfaf7;--surface:#ffffff;--ink:#1c2230;--muted:#5b6475;--line:#dcdfe6;--red:#c4302b;--gold:#f0b400;--ok:#1d7a4a;--okbg:#e4f4ea;--badbg:#fbe6e4;--bad:#a8231f;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14171f;--surface:#1d222d;--ink:#eceef3;--muted:#a3abbb;--line:#343b4a;--red:#ff6b63;--gold:#f4c430;--ok:#6fd49a;--okbg:#17372a;--badbg:#42211f;--bad:#ff9a94;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#14171f;--surface:#1d222d;--ink:#eceef3;--muted:#a3abbb;--line:#343b4a;--red:#ff6b63;--gold:#f4c430;--ok:#6fd49a;--okbg:#17372a;--badbg:#42211f;--bad:#ff9a94;color-scheme:dark}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:1.125rem/1.7 "Source Serif 4",Georgia,serif}
+header{border-bottom:6px solid var(--gold);padding:2.5rem 1.25rem 2rem;max-width:46rem;margin:0 auto}
+h1{font:800 clamp(2rem,6vw,3.2rem)/1.05 "Bricolage Grotesque",system-ui,sans-serif;margin:0 0 .75rem;color:var(--red)}
+.intro{color:var(--muted);margin:0;font-size:1rem}
+.bar{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);border-bottom:1px solid var(--line);z-index:5}
+.bar div{max-width:46rem;margin:0 auto;padding:.6rem 1.25rem;display:flex;gap:1rem;align-items:center;font:600 .9rem "Bricolage Grotesque",system-ui,sans-serif}
+.track{flex:1;height:8px;background:var(--line);border-radius:4px;overflow:hidden}
+.fill{height:100%;width:0;background:var(--ok);transition:width .3s}
+main{max-width:46rem;margin:0 auto;padding:1rem 1.25rem 4rem}
+section{padding:2rem 0 1rem;border-bottom:1px solid var(--line)}
+.head{display:flex;gap:.75rem;align-items:baseline}
+.letter{font:800 1.6rem "Bricolage Grotesque",system-ui,sans-serif;background:var(--gold);color:#1c2230;width:2.4rem;height:2.4rem;border-radius:50%;display:grid;place-items:center;flex:none}
+section p.text{margin:0 0 1.25rem}
+.q{background:var(--surface);border:1px solid var(--line);border-left:5px solid var(--red);border-radius:8px;padding:1rem 1.1rem;margin-bottom:1rem;font-family:"Bricolage Grotesque",system-ui,sans-serif}
+.q h3{margin:0 0 .75rem;font-size:1.05rem;line-height:1.4}
+.q button{display:block;width:100%;text-align:left;font:inherit;font-size:1rem;color:var(--ink);background:var(--bg);border:1.5px solid var(--line);border-radius:6px;padding:.6rem .8rem;margin:.4rem 0;cursor:pointer}
+.q button:hover:not(:disabled){border-color:var(--ink)}
+.q button:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+.q button.right{background:var(--okbg);border-color:var(--ok)}
+.q button.wrong{background:var(--badbg);border-color:var(--bad)}
+.q button:disabled{cursor:default}
+.fb{margin:.6rem 0 0;font-size:.95rem;min-height:1.4em}
+.fb.ok{color:var(--ok)}.fb.no{color:var(--bad)}
+.done{display:none;margin-top:2rem;padding:1.25rem;border-radius:8px;background:var(--surface);border:2px solid var(--gold);font-family:"Bricolage Grotesque",system-ui,sans-serif}
+.done.show{display:block}
+.done button{font:600 1rem inherit;font-family:inherit;margin-top:.5rem;padding:.5rem 1rem;border-radius:6px;border:0;background:var(--red);color:#fff;cursor:pointer}
+.ill{margin:0 0 1.1rem;border-radius:12px;padding:1rem;text-align:center;color:#1c2230;font-family:"Bricolage Grotesque",system-ui,sans-serif}
+.ill .em{font-size:clamp(2rem,9vw,3.4rem);line-height:1.2;letter-spacing:.1em}
+.ill figcaption{font-size:.9rem;font-weight:600;margin-top:.3rem}
+.gl{font:inherit;color:inherit;background:linear-gradient(transparent 60%,rgba(240,180,0,.55) 60%);border:0;border-bottom:2px dotted var(--red);padding:0 1px;cursor:pointer}
+.gl:focus-visible{outline:3px solid var(--gold)}
+.defbar{font:.95rem/1.4 "Bricolage Grotesque",system-ui,sans-serif;color:var(--muted);background:var(--surface);border:1px dashed var(--line);border-radius:6px;padding:.5rem .75rem;margin:0 0 1.25rem}
+.defbar.on{color:var(--ink);border:1px solid var(--gold)}
+.vocab{font-family:"Bricolage Grotesque",system-ui,sans-serif;border-bottom:0}
+.vocab h2{font-size:1.5rem;margin:0 0 .25rem;color:var(--red)}
+.vi{color:var(--muted);margin:0 0 1rem;font-size:1rem}
+.vr{background:var(--surface);border:1.5px solid var(--line);border-radius:8px;padding:.6rem .8rem;margin:.5rem 0;line-height:2;font-size:1rem}
+.vr.ok{border-color:var(--ok);background:var(--okbg)}.vr.bad{border-color:var(--bad);background:var(--badbg)}
+.vr select{font:inherit;max-width:100%;padding:.2rem;background:var(--bg);color:var(--ink);border:1px solid var(--line);border-radius:4px}
+.chk{font:600 1rem "Bricolage Grotesque",system-ui,sans-serif;margin-top:.5rem;padding:.5rem 1rem;border-radius:6px;border:0;background:var(--gold);color:#1c2230;cursor:pointer}
+.vres{font-weight:600;min-height:1.4em}
+@media (prefers-reduced-motion:reduce){.fill{transition:none}}
+</style>
+</head>
+<body>
+<header>
+<h1>The Unstoppable Rise of Burgers and Fries</h1>
+<p class="intro">Read each paragraph and look at the picture. Tap the highlighted words to see what they mean, then answer the question underneath. Wrong answer? Read the hint and try again. Your score counts first tries only. Vocabulary activities are at the end.</p>
+</header>
+<div class="bar"><div><span id="count">0 / 6 correct</span><span class="track"><span class="fill" id="fill"></span></span></div></div>
+<main id="main"></main>
+<script>
+var D=[
+{t:"The hamburger, and the portion of fried potatoes that usually accompanies it, are now among the most widely eaten foods on the planet. Both began as cheap street food – the burger in the industrial cities of the United States in the late nineteenth century, the fried potato in Belgium and northern France rather earlier. Neither was invented for restaurants. What turned them into a global industry was not the recipe but the system built around it: in 1948 two brothers in California reorganised their kitchen so that each worker repeated a single task, and a meal that had taken twenty minutes to prepare could be handed over in less than one. The idea was copied within a decade by dozens of competitors, and by the 1970s the model had crossed both the Atlantic and the Pacific.",
+q:"According to paragraph A, what turned burgers and fries into a global industry?",
+o:["A new and better recipe","A kitchen system where each worker repeats one task","Restaurants that were built specially for them","Cheap street sellers in Belgium and France"],a:1,
+e:"The writer says it was “not the recipe but the system” – workers repeating single tasks made meals fast."},
+{t:"The reasons for the spread of fast food are usually said to be cultural, but economists point to three more ordinary ones. The first is price. Because the ingredients are produced on an enormous scale and the cooking is standardised, a fast-food meal is often the cheapest hot food available in a city centre. The second is speed: customers are served in minutes, which suits people who eat during a short break at work. The third, and the most powerful according to industry analysts, is predictability. A traveller who knows exactly what the food will taste like in an unfamiliar city will choose it over a local restaurant whose menu they cannot read. Marketing reinforces all three; children’s meals sold with a free toy were introduced in 1979 and remain one of the most effective promotions ever designed.",
+q:"Which reason do industry analysts consider the most powerful?",
+o:["Price","Speed","Predictability","Free toys for children"],a:2,
+e:"Analysts rate predictability highest: travellers choose food they know over a menu they cannot read."},
+{t:"The consequences for public health are now the subject of a very large body of research. A typical fast-food meal supplies a high number of calories in a small volume of food, together with a great deal of salt, saturated fat and added sugar, and very little fibre. Because the food is soft and quickly eaten, the body receives the calories before the signals that normally tell us we have eaten enough have had time to arrive. Researchers at a London university who followed fourteen thousand families for ten years reported that children who ate fast food more than twice a week gained weight significantly faster than those who ate it less often, even after the families’ income had been taken into account. Obesity is in turn associated with type 2 diabetes, heart disease and some cancers, and the cost of treating these conditions is the fastest-growing item in most national health budgets.",
+q:"Why can fast food make people eat too many calories?",
+o:["It contains too much fibre","The body’s “full” signals arrive after the food has already been eaten","It is always served in very large portions","It makes people feel hungrier after one bite"],a:1,
+e:"Soft, quickly eaten food delivers calories before the body can signal that it has had enough."},
+{t:"If the evidence is so clear, why do people continue to eat this way? Part of the answer is that the alternatives are not always available. In many low-income neighbourhoods – sometimes called food deserts – there is no supermarket within walking distance, while fried-chicken shops and burger outlets are numerous. Part of the answer is time. Preparing vegetables takes planning, equipment and perhaps forty minutes, which is difficult for a parent working two jobs. And part of the answer is simply that the food is engineered to be pleasant: the combination of fat, salt and sugar that the industry calls ‘the bliss point’ is arrived at by testing hundreds of versions of a product on volunteers until the most popular one is found.",
+q:"Which of these is NOT given as a reason people keep eating fast food?",
+o:["There is no supermarket nearby in some neighbourhoods","Cooking fresh vegetables takes a lot of time","The taste is carefully tested to be as popular as possible","Doctors recommend it as a healthy choice"],a:3,
+e:"Paragraph D mentions availability, time and ‘the bliss point’. Doctors are never mentioned."},
+{t:"Governments have tried several remedies, with uneven success. Denmark introduced a tax on saturated fat in 2011 and abolished it fifteen months later, after shoppers simply drove across the border to Germany to buy butter. Taxes on sugary drinks, by contrast, have worked rather better: in Mexico, where such a tax was introduced in 2014, purchases of the drinks concerned fell by about six per cent in the first year, and by rather more among the poorest households. Compulsory calorie labelling on menus has been shown to change what restaurants sell more than it changes what customers order, because companies quietly reformulate their products rather than advertise an embarrassing number. The measure with the strongest evidence behind it is the restriction of advertising aimed at children; Chile, which banned cartoon characters on packaging in 2016, recorded a fall of almost a quarter in the purchase of the products affected.",
+q:"Which government measure has the strongest evidence behind it?",
+o:["A tax on saturated fat","A tax on sugary drinks","Calorie labels on menus","Limits on advertising aimed at children"],a:3,
+e:"The writer says restricting child-targeted advertising has the strongest evidence – Chile saw purchases fall by almost a quarter."},
+{t:"The industry itself insists that it is changing. Portion sizes in some chains have been reduced, salt has been cut by up to a third in several products, and salads and fruit now appear on almost every menu – although they account for a very small share of what is actually bought. Perhaps the most significant shift is invisible to the customer: the quiet reformulation of recipes, which lowers the fat and salt in a product without announcing it, and which appears to work precisely because nobody is asked to change their behaviour. Few researchers now believe that any single measure will reverse forty years of rising consumption. What they suggest instead is that the burger and the portion of fries will not disappear, but will gradually become something slightly different from what they are today.",
+q:"What do researchers expect to happen to burgers and fries in the future?",
+o:["They will disappear from menus","They will change gradually but remain popular","One government measure will quickly end their popularity","Salads and fruit will replace them"],a:1,
+e:"Researchers think the foods will stay but slowly become “something slightly different”, mainly through quiet reformulation."}
+];
+var L="ABCDEF",done=0,main=document.getElementById("main");
+var GL={"standardised":"adjective: made the same every time, following one fixed pattern","predictability":"noun: being exactly what you expect, with no surprises","reinforces":"verb: makes something stronger or more effective","obesity":"noun: a medical condition of having too much body fat","engineered":"verb: designed and made carefully to achieve a particular effect","the bliss point":"noun phrase: the exact mix of fat, salt and sugar that people enjoy most","abolished":"verb: officially ended (a law, tax or system)","remedies":"noun: ways of solving a problem","compulsory":"adjective: required by law or rules; you must do it","reformulate":"verb: to change the ingredients of a product to make a new version","reformulation":"noun: changing a recipe or product in this way","restriction":"noun: a rule or limit on what is allowed","insists":"verb: says something firmly, even when others doubt it"};
+var GR=new RegExp("("+Object.keys(GL).join("|")+")","gi");
+function gloss(t){return t.replace(GR,function(m){return '<button class="gl" data-m="'+GL[m.toLowerCase()]+'">'+m+'</button>'})}
+function fig(bg,em,cap){return '<figure class="ill" style="background:'+bg+'"><div class="em" role="img" aria-label="'+cap+'">'+em+'</div><figcaption>'+cap+'</figcaption></figure>'}
+var IL=[fig("#ffe9b8","👨‍🍳 🍔 🍟 ➜ 🌍","From one California kitchen to the whole world"),fig("#d9ecff","💲 ⏱️ 📍","Price, speed and predictability"),fig("#ffd9d6","🍔 🍟 🥤 ➜ ⚖️","Lots of calories in a small, fast meal"),fig("#e2f3d8","🏪❌ 🍗 🍔 ⏰","No supermarket nearby, and no time to cook"),fig("#eadcff","🏛️ 💰 🚫📺 🧒","Governments: taxes, labels and advertising limits"),fig("#d4f3ee","🍔 🔄 🥬","Slow, quiet change instead of a sudden stop")];
+function shuf(a){return a.map(function(x){return[Math.random(),x]}).sort(function(p,q){return p[0]-q[0]}).map(function(p){return p[1]})}
+function act(title,intro,rows,choices){var d=document.createElement("section");d.className="vocab";d.innerHTML="<h2></h2><p class='vi'></p>";d.querySelector("h2").textContent=title;d.querySelector(".vi").textContent=intro;var sels=[];
+ rows.forEach(function(r){var p=document.createElement("div");p.className="vr";p.innerHTML=r.pre+' <select><option value="">Choose…</option></select> '+r.post;var s=p.querySelector("select");shuf(choices).forEach(function(c){var o=document.createElement("option");o.value=o.textContent=c;s.appendChild(o)});sels.push([s,r.ans,p]);d.appendChild(p)});
+ var b=document.createElement("button");b.className="chk";b.textContent="Check answers";var res=document.createElement("p");res.className="vres";res.setAttribute("aria-live","polite");
+ b.onclick=function(){var n=0;sels.forEach(function(x){var ok=x[0].value===x[1];if(ok)n++;x[2].className="vr "+(ok?"ok":"bad")});res.textContent=n+" / "+rows.length+(n===rows.length?" – excellent!":" – fix the red ones and check again.")};
+ d.appendChild(b);d.appendChild(res);return d}
+function buildVocab(){var V=[["standardised","made the same every time, following one fixed pattern"],["predictability","being exactly what you expect, with no surprises"],["reinforces","makes something stronger or more effective"],["engineered","designed and made carefully to achieve a particular effect"],["abolished","officially ended (a law, tax or system)"],["remedies","ways of solving a problem"],["compulsory","required by law or rules; you must do it"],["reformulate","change the ingredients of a product to make a new version"]];
+ var G=[["The school made swimming lessons","for every student.","compulsory"],["The government","the tax after only fifteen months.","abolished"],["Many cafés","their recipes to use less sugar, without telling customers.","reformulate"],["Customers like the","of a chain: they know exactly what they will get.","predictability"],["The company","that its products are getting healthier.","insists"],["There is a new","on selling sweets near schools.","restriction"]];
+ main.appendChild(act("Vocabulary 1: Match the word to its meaning","Choose the correct meaning for each word from the article.",V.map(function(v){return{pre:"<strong>"+v[0]+"</strong> =",post:"",ans:v[1]}}),V.map(function(v){return v[1]})));
+ main.appendChild(act("Vocabulary 2: Complete the sentences","Choose the best word from the list in each gap.",G.map(function(g){return{pre:g[0],post:g[1],ans:g[2]}}),G.map(function(g){return g[2]})))}
+D.forEach(function(d,i){
+ var s=document.createElement("section");
+ s.innerHTML='<div class="head"><span class="letter">'+L[i]+'</span></div>'+IL[i]+'<p class="text"></p><p class="defbar" aria-live="polite">Tap a highlighted word to see its meaning.</p><div class="q"><h3></h3><div class="opts"></div><p class="fb" aria-live="polite"></p></div>';
+ var tp=s.querySelector(".text"),db=s.querySelector(".defbar");tp.innerHTML=gloss(d.t);tp.addEventListener("click",function(e){var g=e.target.closest(".gl");if(g){db.innerHTML="<strong>"+g.textContent+"</strong> – "+g.getAttribute("data-m");db.classList.add("on")}});
+ s.querySelector("h3").textContent=d.q;
+ var box=s.querySelector(".opts"),fb=s.querySelector(".fb"),tries=0,solved=false;
+ d.o.forEach(function(o,j){
+  var b=document.createElement("button");b.textContent=o;
+  b.onclick=function(){
+   if(solved)return;tries++;
+   if(j===d.a){solved=true;b.className="right";fb.className="fb ok";fb.textContent="Correct. "+d.e;
+    box.querySelectorAll("button").forEach(function(x){x.disabled=true});
+    if(tries===1)done++;
+    update();
+   }else{b.className="wrong";b.disabled=true;fb.className="fb no";fb.textContent="Not quite. Re-read paragraph "+L[i]+" and try again."}
+  };box.appendChild(b);
+ });
+ main.appendChild(s);
+});
+var fin=document.createElement("div");fin.className="done";fin.innerHTML='<strong id="msg"></strong><br><button onclick="window.scrollTo({top:0})">Back to the top</button>';
+main.appendChild(fin);buildVocab();
+var solvedCount=0;
+function update(){
+ solvedCount=document.querySelectorAll(".opts button.right").length;
+ document.getElementById("count").textContent=done+" / "+D.length+" first-try";
+ document.getElementById("fill").style.width=(solvedCount/D.length*100)+"%";
+ if(solvedCount===D.length){fin.classList.add("show");document.getElementById("msg").textContent="All paragraphs finished. You got "+done+" of "+D.length+" right on the first try. Now scroll down for the vocabulary activities."}
+}
+update();
+</script>
+</body>
+</html>
